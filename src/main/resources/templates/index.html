@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'index')}">
 <body>
 
 <div class="jumbotron text-center">
@@ -8,15 +8,19 @@
       <img src="/lang-logo.png">
     </a>
     <h1>Mapp 2 REST-API</h1>
-    <p>Documentation of REST-API</p>
-    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#restapi">View REST-API</button>
-    <div id="restapi" class="collapse">
+    <div class="container">
+      <p>Documentation of REST-API</p>
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#restapi">View REST-API</button>
+    </div>
+    <div id="restapi" class="container collapse">
       Nothing here yet...
     </div>
-    <a type="button" class="btn btn-lg btn-default" href="https://ilearn2.dsv.su.se/course/view.php?id=751"><span class="glyphicon glyphicon-cloud"></span>iLearn Mapp</a>
-    <a type="button" class="btn btn-lg btn-default" href="https://github.com/Jarvitalo/mapp2_unity"><span class="glyphicon glyphicon-cloud"></span>Mapp 2 Unity repository</a>
-    <a type="button" class="btn btn-lg btn-default" href="https://github.com/Jarvitalo/mapp2_heroku"><span class="glyphicon glyphicon-cloud"></span>Mapp 2 Heroku auto deploy repository</a>
   </div>
+</div>
+<div class="container">
+  <a type="button" class="btn btn-lg btn-default" href="https://ilearn2.dsv.su.se/course/view.php?id=751"><span class="glyphicon glyphicon-cloud"></span>iLearn Mapp</a>
+  <a type="button" class="btn btn-lg btn-default" href="https://github.com/Jarvitalo/mapp2_unity"><span class="glyphicon glyphicon-cloud"></span>Mapp 2 Unity repository</a>
+  <a type="button" class="btn btn-lg btn-default" href="https://github.com/Jarvitalo/mapp2_heroku"><span class="glyphicon glyphicon-cloud"></span>Mapp 2 Heroku auto deploy repository</a>
 </div>
 
 </body>
