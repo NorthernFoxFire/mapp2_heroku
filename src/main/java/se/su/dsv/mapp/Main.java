@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2002-2014 the original author or authors.
  *
@@ -14,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.example;
+package se.su.dsv.mapp;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -52,6 +53,8 @@ public class Main {
   String index() {
     return "index";
   }
+
+
 
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
