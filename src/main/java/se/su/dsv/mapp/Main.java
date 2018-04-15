@@ -26,7 +26,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -54,6 +56,11 @@ public class Main {
     return "index";
   }
 
+
+  @RequestMapping(value = "/helloworld", method = RequestMethod.GET)
+  public ResponseEntity<String> helloWorld() {
+    return new ResponseEntity<String>("Hello World to to you too!", HttpStatus.OK);
+  }
 
 
   @RequestMapping("/db")
